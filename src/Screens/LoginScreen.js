@@ -36,9 +36,9 @@ const LoginScreen = () => {
 							</label>
 						</div>
 					<button className="w-100 btn btn-lg btn-primary mb-2" type="submit">{t('signin_btn_text')}</button>
-					<button className="w-100 btn btn-lg btn-success mb-2" type="button" onClick={switchLanguage} value="en">English</button>
-					<button className="w-100 btn btn-lg btn-warning" type="button" onClick={switchLanguage} value="he">עברית</button>
-						<p className="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+					<button className="w-100 btn btn-sm btn-success mb-2" type="button" onClick={switchLanguage} value="en">English</button>
+					<button className="w-100 btn btn-sm btn-warning" type="button" onClick={switchLanguage} value="he">עברית</button>
+						<p className="mt-5 mb-3 text-muted">&copy; 2012–2022</p>
 				</form>
 			</main>
         </div>
