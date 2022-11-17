@@ -90,3 +90,16 @@ body {
 	border-top-right-radius: 0;
 }
 
+.hebrew-label{
+	font-size: 0.8rem;
+	text-align: end !important;
+	right: 0;
+	left: none !important;
+	transform: scale(.85) translateY(-0.5rem) translateX(2.5rem) !important;
+}
+
+.hebrew-input {
+	text-align: end;
+}
+
+/* transform: scale(.85) translateY(-0.85rem) translateX(2.5rem); */

@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import '../i18n/config';
 import { useTranslation } from "react-i18next";
 import "../assets/css/signin.css";
 import logo from "../assets/images/brand/bootstrap-logo.svg";
 
 const LoginScreen = () => {
-
+	const [heLabel, setHeLabel ] = useState('');
+	const [heText, setHeText ] = useState('');
 	const { t } = useTranslation();
 	const { i18n } = useTranslation();
 
 	const switchLanguage = (e) => {
 		console.log(e.target.value)
+		if( e.target.value === 'he'){
+			setHeLabel('hebrew-label');
+			setHeText('hebrew-input')
+		}else{
+			setHeLabel('');
+			setHeText('')
+		}
 		i18n.changeLanguage(e.target.value);
 	}
 
@@ -22,12 +30,12 @@ const LoginScreen = () => {
 					<h1 className="h3 mb-3 fw-normal">{t('signin_title')}</h1>
 
 						<div className="form-floating">
-							<input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-						<label for="floatingInput">{t('signin_email_ph')}</label>
+						<input type="email" className={`form-control ${heText}`} id="floatingInput" placeholder="name@example.com" />
+						<label className={`${heLabel}`} htmlFor="floatingInput">{t('signin_email_ph')}</label>
 						</div>
 						<div className="form-floating">
-						<input type="password" className="form-control" id="floatingPassword" placeholder={t('signin_pass_ph')} />
-						<label for="floatingPassword">{t('signin_pass_ph')}</label>
+						<input type="password" className={`form-control ${heText}`} id="floatingPassword" placeholder={t('signin_pass_ph')} />
+						<label className={`${heLabel}`} htmlFor="floatingPassword">{t('signin_pass_ph')}</label>
 						</div>
 
 						<div className="checkbox mb-3">
