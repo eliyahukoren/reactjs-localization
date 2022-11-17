@@ -1,0 +1,9 @@
+{
+	"home" : "Home",
+	"page2": "Page 2",
+	"signin_title": "Please sign in",
+	"signin_btn_text": "Sign in",
+	"signin_rmb_text": "Remember me",
+	"signin_email_ph": "Email address",
+	"signin_pass_ph": "Password"
+}
