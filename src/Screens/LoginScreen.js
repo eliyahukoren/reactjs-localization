@@ -7,6 +7,7 @@ import logo from "../assets/images/brand/bootstrap-logo.svg";
 const LoginScreen = () => {
 	const [heLabel, setHeLabel ] = useState('');
 	const [heText, setHeText ] = useState('');
+	const [heCheckbox, setHeCheckbox ] = useState('');
 	const { t } = useTranslation();
 	const { i18n } = useTranslation();
 
@@ -14,10 +15,12 @@ const LoginScreen = () => {
 		console.log(e.target.value)
 		if( e.target.value === 'he'){
 			setHeLabel('hebrew-label');
-			setHeText('hebrew-input')
+			setHeText('hebrew-input');
+			setHeCheckbox('hebrew-checkbox');
 		}else{
 			setHeLabel('');
-			setHeText('')
+			setHeText('');
+			setHeCheckbox('');
 		}
 		i18n.changeLanguage(e.target.value);
 	}
@@ -40,7 +43,7 @@ const LoginScreen = () => {
 
 						<div className="checkbox mb-3">
 							<label>
-							<input type="checkbox" value="remember-me" /> {t('signin_rmb_text')}
+							<input className={`${heCheckbox}`} type="checkbox" value="remember-me" /> {t('signin_rmb_text')}
 							</label>
 						</div>
 					<button className="w-100 btn btn-lg btn-primary mb-2" type="submit">{t('signin_btn_text')}</button>
